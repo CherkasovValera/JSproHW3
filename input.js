@@ -14,9 +14,7 @@ addButton.addEventListener('click', () => {
     const review = addText.value.trim();
     if (product !=='' && review !=='') {
         let reviewList = JSON.parse(localStorage.getItem(product)) || [];
-        // if (reviewList === null) {
-        //     reviewList = []
-        //  }
+        
         reviewList.push(review);
         localStorage.setItem(product, JSON.stringify(reviewList))
     } else{
